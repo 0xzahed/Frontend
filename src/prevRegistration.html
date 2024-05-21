@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital-Management-System</title>
+
+    <!-- css -->
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Tailwind & DaisyUI -->
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- icon -->
+
+    <script src="https://kit.fontawesome.com/7ff9b0e562.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <!--header section  -->
+
+    <header class="lg:ml-32 lg:mr-32 mt-10">
+
+        <!-- nav section -->
+
+        <section class="ml-8 mr-8 lg:ml-0 lg:mr-0 ">
+
+            <div class="navbar">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 gap-4">
+                            <li><a href="index.html"
+                                    class="text-lg font-semibold hover:text-white hover:bg-green-500 flex justify-center items-center">Home</a>
+                            </li>
+                            <li><a href="about.html"
+                                    class="text-lg font-semibold hover:text-white hover:bg-green-500 flex justify-center items-center">About</a>
+                            </li>
+                            <li><a href="service.html"
+                                    class="text-lg font-semibold hover:text-white hover:bg-green-500 flex justify-center items-center">Services</a>
+                            </li>
+                            <li><a href="contact.html"
+                                    class="text-lg font-semibold hover:text-white hover:bg-green-500 flex justify-center items-center">Contact</a>
+                            </li>
+                            <li><a href="appointment.html"
+                                class="text-lg font-semibold hover:text-white hover:bg-green-500 flex justify-center items-center">Appointment</a>
+                            </li>
+                            <li><a href="requregi.html"
+                                class="text-lg font-semibold hover:text-white hover:bg-green-500">Request Registration</a></li>
+                        </ul>
+                    </div>
+                    <a class="btn bg-white border-0 hover:bg-white text-xl font-bold lg:font-extrabold lg:text-3xl"><img
+                            src="assats/icon-1.png" class="h-6 w-6 lg:h-10 lg:w-10 " alt=""><span
+                            class="text-green-500"> Medi</span><span class="text-red-500">Aid</span></a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1">
+                        <li><a href="index.html"
+                                class="text-lg font-semibold hover:text-white hover:bg-green-500">Home</a></li>
+                        <li><a href="about.html"
+                                class="text-lg font-semibold hover:text-white hover:bg-green-500">About</a></li>
+                        <li><a href="service.html"
+                                class="text-lg font-semibold hover:text-white hover:bg-green-500">Services</a></li>
+                        <li><a href="contact.html"
+                            class="text-lg font-semibold hover:text-white hover:bg-green-500">Contact</a></li>
+                        <li><a href="appointment.html"
+                            class="text-lg font-semibold hover:text-white hover:bg-green-500">Appointment</a></li>
+                        <li><a href="requregi.html" 
+                            class="text-lg font-semibold hover:text-white hover:bg-green-500 flex justify-center items-center">Doctor Register</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <a href="" class="btn text-lg font-semibold bg-red-500 text-white hover:bg-green-500">Log in</a>
+                </div>
+            </div>
+
+        </section>
+
+
+    </header>
+
+    <!-- main section -->
+
+    <main>
+
+
+
+        <div class="flex flex-col lg:flex-row justify-between gap-5 lg:gap-10 lg:ml-32 lg:mr-32 mr-4 ml-4 mt-10">
+
+            <div class="flex flex-col justify-center items-center text-2xl font-bold border-2 h-40 p-10 lg:w-1/4 rounded-2xl">
+                <ul>
+                    <li> <a href="">Patient</a> </li>
+                    <li> <a href="register.html">Doctor</a></li>
+                    <li> <a href="">Admin</a></li>
+                </ul>
+            </div>
+
+            <div class="lg:w-2/4">
+                <section class="log-in  bg-green-100 pb-10 rounded-2xl">
+
+                    <div class="hero min-h-60 ">
+                        <div
+                            class="hero-content lg:gap-40">
+
+                            
+                            <!-- <div class="text-center lg:text-left">
+                                <h1 class="text-3xl lg:text-4xl font-bold">Login now!</h1>
+                                <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi
+                                    exercitationem quasi. In deleniti eaque aut repudiandae.</p>
+                                <img src="assats/login-img.jpg" alt="" class="h-80">
+                            </div> -->
+                            <div class="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100 lg:ml-10">
+                                <h1 class="text-3xl lg:text-4xl font-bold text-center my-8">Register Here!</h1>
+                                <form class="card-body">
+                                    <div class="form-control">
+                                        <label class="label">
+                                            <span class="label-text">Name</span>
+                                        </label>
+                                        <input type="text" placeholder="Name" class="input input-bordered" required />
+                                    </div>
+                                    <div class="form-control">
+                                        <label class="label">
+                                            <span class="label-text">Email</span>
+                                        </label>
+                                        <input type="email" placeholder="email" class="input input-bordered" required />
+                                    </div>
+                                    <div class="form-control">
+                                        <label class="label">
+                                            <span class="label-text">Password</span>
+                                        </label>
+                                        <input type="password" placeholder="password" class="input input-bordered"
+                                            required />
+                                            <label class="label">
+                                                <span class="label-text">Confirm Password</span>
+                                            </label>
+                                            <input type="password" placeholder="password" class="input input-bordered"
+                                                required />
+                                        <label class="label">
+                                            <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+                                        </label>
+                                    </div>
+                                    <div class="form-control mt-6">
+                                        <a href="index.html"
+                                            class="btn text-lg font-semibold bg-red-500 text-white hover:bg-green-500">Registration</a>
+                                    </div>
+                                </form>
+                            </div>
+    
+                        </div>
+    
+                    </div>
+    
+                    <div>
+                        <hr class="h-1 min-w-full border-dotted mb-6 mt-8">
+                    </div>
+    
+                    <div class="flex justify-center items-center">
+                        <p class=" font-medium mb-4">OR</p>
+                    </div>
+    
+                    <div class="flex justify-center items-center">
+                        <a class="btn btn-ghost text-lg bg-white"><img src="assats/google_icon.png" alt=""> Continue with
+                            Google</span></a>
+                    </div>
+    
+                    <div class="flex justify-center items-center mt-6 gap-1">
+                        <p>Already have an account?</p>
+                        <a href="login.html" class="text-[#4A00FF]">Login</a>
+                    </div>
+    
+                </section>
+            </div>
+
+            <div class="text-center text-2xl font-bold lg:w-1/4">
+                <h3>
+                    Enter your photo
+                </h3>
+                <div class="border-2 p-5 rounded-xl mt-5">
+                    submit here
+                </div>
+                <button class="btn px-2 mt-5">
+                    Submit
+                </button>
+            </div>
+        </div>
+
+
+
+    </main>
+
+    <!-- footer section -->
+
+    <footer
+        class=" pl-30 pr-30 pt-10 pb-10 lg:pl-36 footer bg-[#001529] text-base-content lg:flex lg:justify-between mt-10">
+        <aside class="w-full">
+            <h2 class="lg:text-3xl text-xl text-center w-full lg:text-left text-[#FFF] font-extrabold">
+                Get In Touch
+            </h2>
+            <p class=" p-4 text-center w-full lg:text-left text-[#ffffff99] font-medium text-base mt-4">
+                To connect with us, you can follow our facebook page, subscribe our youtube channel, follow us in insta
+                and twitter.
+                also ypu can share your experience in our email section.
+            </p>
+            <p class=" text-center w-full lg:text-left font-medium text-[#FFF] mt-6">
+                <i class="fa-regular fa-envelope text-[#FF4240]"></i>
+                ashikpullock99@gmail.com
+            </p>
+            <p class=" text-center w-full lg:text-left font-medium text-[#FFF] mt-3">
+                <i class="fa-solid fa-phone text-[#FF4240]"></i>
+                (+88) 01624-334044
+            </p>
+        </aside>
+        <div
+            class="w-full flex justify-evenly lg:justify-between  items-center md:justify-between flex-row xl:justify-between 2xl:justify-between">
+            <nav class=" flex flex-col justify-between items-center">
+                <header class=" text-[#FFF] font-bold text-xl mb-7">Company</header>
+                <a class="link link-hover font-medium text-[#ffffff99]">About us</a>
+                <a class="link link-hover font-medium text-[#ffffff99]">Leadership</a>
+                <a class="link link-hover font-medium text-[#ffffff99]">Careers</a>
+                <a class="link link-hover font-medium text-[#ffffff99]">News & Article</a>
+                <a class="link link-hover font-medium text-[#ffffff99]">Legal Notice</a>
+            </nav>
+            <nav class=" flex flex-col justify-between items-center">
+                <header class=" text-[#FFF] font-bold text-xl mb-8">Support</header>
+                <a class="link link-hover font-medium text-[#ffffff99] mb-1 ">Help Center</a>
+                <a class="link link-hover font-medium text-[#ffffff99] mb-1">FAQ</a>
+                <a class="link link-hover font-medium text-[#ffffff99] mb-1">Ticket Support</a>
+                <a class="link link-hover font-medium text-[#ffffff99] mb-1">Contact Us</a>
+            </nav>
+        </div>
+        <nav class="w-full">
+            <header class=" text-center w-full    text-[#FFF] lg:text-center font-bold text-xl mb-7">Services</header>
+            <a class="link link-hover font-medium text-[#ffffff99] text-center lg:text-center w-full">Academy</a>
+            <a class="link link-hover font-medium text-[#ffffff99] text-center lg:text-center w-full">Group Lesson</a>
+            <a class="link link-hover font-medium text-[#ffffff99] text-center lg:text-center w-full">Private Lesson</a>
+            <a class="link link-hover font-medium text-[#ffffff99] text-center lg:text-center w-full">Hockeys for
+                kids</a>
+            <a class="link link-hover font-medium text-[#ffffff99] text-center lg:text-center w-full">Hockeys for
+                Adult</a>
+        </nav>
+    </footer>
+
+    <!-- js file -->
+
+    <script src="tailwind.config.js"></script>
+</body>
+
+</html>
