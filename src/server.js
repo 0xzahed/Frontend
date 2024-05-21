@@ -1,74 +1,52 @@
-
-const express = require ("express");
-const path = require ('path');
-
-
-const app = express();
-
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
-});
-
-app.listen(8080, () => {
-    console.log ('Server Is Listening on port 8080');
-});
-
-
-
-/* server.js
 const express = require('express');
 const path = require('path');
 const app = express();
 
-app.listen(8080, () => {
-    console.log ('Server Is Listening on port 8080');
-});
+const port = process.env.PORT || 3000;
 
-// Serve static files from the 'src/assats' directory
-app.use(express.static(path.join(__dirname, 'assats')));
-
-
+app.use(express.static(path.join(__dirname, 'src/assats')));
 app.use(express.static(path.join(__dirname, 'src')));
 
-
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.sendFile(path.join(__dirname, 'src/index.html'));
 });
 
 app.get('/about', (req, res) => {
-  res.sendFile(path.join(__dirname, 'about.html'));
+  res.sendFile(path.join(__dirname, 'src/about.html'));
 });
 
 app.get('/appointment', (req, res) => {
-  res.sendFile(path.join(__dirname, 'appointment.html'));
+  res.sendFile(path.join(__dirname, 'src/appointment.html'));
 });
 
 app.get('/contact', (req, res) => {
-  res.sendFile(path.join(__dirname, 'contact.html'));
+  res.sendFile(path.join(__dirname, 'src/contact.html'));
 });
 
 app.get('/doctorlist', (req, res) => {
-  res.sendFile(path.join(__dirname, 'doctorlist.html'));
+  res.sendFile(path.join(__dirname, 'src/doctorlist.html'));
 });
 
 app.get('/login', (req, res) => {
-  res.sendFile(path.join(__dirname, 'login.html'));
+  res.sendFile(path.join(__dirname, 'src/login.html'));
 });
 
 app.get('/prevRegistration', (req, res) => {
-  res.sendFile(path.join(__dirname, 'prevRegistration.html'));
+  res.sendFile(path.join(__dirname, 'src/prevRegistration.html'));
 });
 
 app.get('/register', (req, res) => {
-  res.sendFile(path.join(__dirname, 'register.html'));
+  res.sendFile(path.join(__dirname, 'src/register.html'));
 });
 
 app.get('/requregi', (req, res) => {
-  res.sendFile(path.join(__dirname, 'requregi.html'));
+  res.sendFile(path.join(__dirname, 'src/requregi.html'));
 });
 
 app.get('/service', (req, res) => {
-  res.sendFile(path.join(__dirname, 'service.html'));
+  res.sendFile(path.join(__dirname, 'src/service.html'));
 });
 
-*/
+app.listen(port, () => {
+  console.log(`Server running at http://localhost:${port}/`);
+});
