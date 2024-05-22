@@ -48,7 +48,7 @@ app.get('/service', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}/`);
+  console.log(`Server running at http://localhost:${port}`);
 });
 
 
@@ -98,7 +98,7 @@ app.post('/register', upload.fields([{ name: 'fileToUpload', maxCount: 1 }, { na
 
 // Start the server
 app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}/`);
+  console.log(`Server running at http://localhost:${port}`);
 });
 
 //PreRegistration
