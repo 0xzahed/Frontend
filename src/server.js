@@ -1,11 +1,12 @@
 const express = require('express');
 const path = require('path');
 const app = express();
+const mongoose = require('mongoose');
 
-const port = process.env.PORT || 3001;
+const port = 7000;
 
 app.use(express.static(path.join(__dirname, 'src/assats')));
-app.use(express.static(path.join(__dirname, 'src')));
+app.use(express.static(path.join(__dirname, '')));
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'src/index.html'));
@@ -18,7 +19,6 @@ app.get('/about', (req, res) => {
 app.get('/appointment', (req, res) => {
   res.sendFile(path.join(__dirname, 'src/appointment.html'));
 });
-
 app.get('/contact', (req, res) => {
   res.sendFile(path.join(__dirname, 'src/contact.html'));
 });
@@ -46,24 +46,30 @@ app.get('/requregi', (req, res) => {
 app.get('/service', (req, res) => {
   res.sendFile(path.join(__dirname, 'src/service.html'));
 });
+async function main() {
+try {
+  await mongoose.connect('mongodb+srv://zahed24:12345@cluster0.q8dlmtg.mongodb.net/mediaid?retryWrites=true&w=majority&appName=Cluster0');
+  console.log("Databse Connected")
+  app.listen(port, () => {
+    console.log(`Server running at http://localhost:${port}`);
+  });
+  
+} catch (error) {
+  console.log(error.message)
+} 
+  
+}
+main()
 
-app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
-});
 
-
-
-//registration 
-
+//registration
 const multer = require('multer');
-const bodyParser = require('body-parser');
+const bodyParser = require('body-parser'); 
+app.use(express.static(path.join(__dirname, 'src')));
 
 // Middleware to parse form data
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
-// Serve static files
-app.use(express.static(path.join(__dirname, 'src')));
 
 // Configure multer for file uploads
 const storage = multer.diskStorage({
@@ -78,7 +84,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 // Route to serve registration form
-app.get('/', (req, res) => {
+app.get('/register', (req, res) => {
   res.sendFile(path.join(__dirname, 'src/register.html'));
 });
 
@@ -96,9 +102,3 @@ app.post('/register', upload.fields([{ name: 'fileToUpload', maxCount: 1 }, { na
   res.send('Form submitted successfully!');
 });
 
-// Start the server
-app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
-});
-
-//PreRegistration

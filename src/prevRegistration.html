@@ -53,12 +53,12 @@
                             class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 gap-4">
                             <li><a href="index.html"
                                     class="text-lg font-semibold hover:text-white hover:bg-green-500 flex justify-center items-center">Home</a>
-                            </li>
-                            <li><a href="about.html"
-                                    class="text-lg font-semibold hover:text-white hover:bg-green-500 flex justify-center items-center">About</a>
-                            </li>
+                            </li> 
                             <li><a href="service.html"
                                     class="text-lg font-semibold hover:text-white hover:bg-green-500 flex justify-center items-center">Services</a>
+                            </li>
+                            <li><a href="about.html"
+                                class="text-lg font-semibold hover:text-white hover:bg-green-500 flex justify-center items-center">About</a>
                             </li>
                             <li><a href="contact.html"
                                     class="text-lg font-semibold hover:text-white hover:bg-green-500 flex justify-center items-center">Contact</a>
@@ -80,15 +80,15 @@
                     <ul class="menu menu-horizontal px-1">
                         <li><a href="index.html"
                                 class="text-lg font-semibold hover:text-white hover:bg-green-500">Home</a></li>
+                        <li><a href="service.html"
+                                    class="text-lg font-semibold hover:text-white hover:bg-green-500">Services</a></li>
                         <li><a href="about.html"
                                 class="text-lg font-semibold hover:text-white hover:bg-green-500">About</a></li>
-                        <li><a href="service.html"
-                                class="text-lg font-semibold hover:text-white hover:bg-green-500">Services</a></li>
                         <li><a href="contact.html"
                                 class="text-lg font-semibold hover:text-white hover:bg-green-500">Contact</a></li>
                         <li><a href="appointment.html"
                                 class="text-lg font-semibold hover:text-white hover:bg-green-500">Appointment</a></li>
-                        <li><a href="register.html"
+                        <li><a href="requregi.html"
                                 class="text-lg font-semibold hover:text-white hover:bg-green-500">Doctor
                                 Register</a>
                         </li>
@@ -205,11 +205,10 @@
             </div>
 
             <div class="text-center text-2xl font-bold lg:w-1/4 hidden lg:block">
-                <h3>
-                    Enter your photo
-                </h3>
-                <div class="border-2 p-5 rounded-xl mt-5">
-                    submit here
+                <div class="mb-4">
+                    <label for="fileToUpload2" class="block text-sm font-medium text-gray-700">Upload your personal photo:</label>
+                    <input type="file" name="fileToUpload2" id="fileToUpload2" required
+                        class="border border-gray-300 rounded-md py-2 px-4 focus:outline-none focus:ring focus:border-blue-300">
                 </div>
                 <button class="btn px-2 mt-5">
                     Submit
